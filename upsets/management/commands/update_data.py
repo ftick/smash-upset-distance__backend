@@ -26,7 +26,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         path = options['path']
         reader = SqliteArchiveReader(path)
-        tree_manager = UpsetTreeManager('222927')
+        tree_manager = UpsetTreeManager('6189')
         if options['object']:
             if options['object'] == 'players':
                 reader.update_players()
