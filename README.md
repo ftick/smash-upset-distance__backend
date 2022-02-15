@@ -3,21 +3,21 @@
 ## Introduction
 
 This repo objective is to provide an API backend to a front web app available [here](https://upsets.ssbapps.com/).
-The front code repo is [also available](https://github.com/leopons/smash-upset-distance__frontend).
+The front code repo is [also available](https://github.com/ftick/smash-upset-distance__frontend).
 
-The web app goal is to allow any Super Smash Bros Ultimate competitive player to calculate what I call his 'upset distance' to the best player in the world at this day, MkLeo.
+The web app goal is to allow any Super Smash Bros Melee competitive player to calculate what I call their 'upset distance' to the GOAT, Armada.
 
 ### The Upset Distance
 
 What do I mean by that ?
-Given all the sets that have been played in registered tournaments for this game, your upset distance to MkLeo is the minimal number of wins you need to go from you to him.
+Given all the sets that have been played in registered tournaments for this game, your upset distance to Armada is the minimal number of wins you need to go from you to him.
 
 Which means :
-- All the people that have won at least one time against MkLeo on a registered tournament have a distance of 1 from him. For exemple Glutonny has won against MkLeo at least one time, thus he has a distance of 1.
-- All the people that have won at least one time against someone who has beaten MkLeo, have a distance of 2. Said differently, if you have beaten someone who is at a distance of 1 from MkLeo, you are yourself at a distance of 2. For exemple Raflow has won one time against Glutonny, thus he has a distance of 2.
+- All the people that have won at least one time against Armada on a registered tournament have a distance of 1 from him. For exemple Hungrybox has won against Armada at least one time, thus he has a distance of 1.
+- All the people that have won at least one time against someone who has beaten Armada, have a distance of 2. Said differently, if you have beaten someone who is at a distance of 1 from Armada, you are yourself at a distance of 2. For exemple Raflow has won one time against Glutonny, thus he has a distance of 2.
 - This goes on as many times as needed.
-- Your final distance is your minimal distance, ie the shortest path of wins that lead from you to MkLeo.
-- Some people may not have a score, if there is not any win path that can lead to MkLeo. This can happen for example with a player that has never won against anyone.
+- Your final distance is your minimal distance, ie the shortest path of wins that lead from you to Armada.
+- Some people may not have a score, if there is not any win path that can lead to Armada. This can happen for example with a player that has never won against anyone.
 
 The app objective is to calculate this distance and the shortest win path associated, see the endpoint part for some examples.
 
@@ -290,7 +290,7 @@ To run the local server : `python manage.py runserver`
 
 ### Data Setup
 
-To initiate the data, download the last DB export for ultimate on [the player database Github repo](https://github.com/smashdata/ThePlayerDatabase).
+To initiate the data, download the last DB export for Melee on [the player database Github repo](https://github.com/smashdata/ThePlayerDatabase).
 Then simply run `python manage.py update_data path/to/the/db/file.db`. It could take a while depending on your local specs (like an hour), but there is some clear logging so you should be able to check it's progressing correctly.
 
 If you need to update only some objects for dev purposes, you can : `python manage.py update_data file.db -o tournaments`.
